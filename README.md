@@ -46,8 +46,45 @@ AI-Powered-Prompt-Assistant/ai-assistant
 ```bash
 git clone https://github.com/rishika712/AI-Powered-Prompt-Assistant.git
 cd AI-Powered-Prompt-Assistant
+```
 ### 2. Create & activate a virtual environment
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+### 3. Install dependencies
+```bash
+pip install -r requirements.txt
+```
+### 4. Configure API Key
+Create a .env file in the project root:
+```bash
+GOOGLE_API_KEY=your_gemini_api_key_here
+```
+### 5. Run the Flask app
+```bash
+ python app.py
+### The app will run on http://127.0.0.1:5000/.
+```
 
+---
+
+## 📊 Feedback Storage
+
+1. Feedback is collected after each response (Yes/No).
+
+2. Saved in feedback.csv.
+
+3. This can be analyzed later to refine prompts and improve the assistant.
+
+---
+
+## 🚀 Future Improvements
+
+1. Add user authentication.
+
+2. Include voice input and text-to-speech output.
+
+3. Implement real-time feedback analysis.
+
+---
