@@ -23,12 +23,19 @@ A web-based AI Assistant built using **Google Gemini API** that performs multipl
 AI-Powered-Prompt-Assistant/ai-assistant
 │
 ├── app.py # Flask application
+
 ├── ai_helper.py # Handles AI requests & prompts
+
 ├── templates/
+
 │ └── index.html # Web interface
+
 ├── static/
+
 │ └── style.css # Styling
+
 ├── feedback.csv # Stores user feedback
+
 └── .env # API Key (not uploaded to GitHub)
 
 ---
