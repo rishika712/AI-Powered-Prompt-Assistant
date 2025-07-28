@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Assistant</h1>
+        <form method="POST">
+            <textarea name="user_input" placeholder="Enter your text or question..." required></textarea>
+            <select name="function">
+                <option value="question">Answer Questions</option>
+                <option value="summary">Summarize Text</option>
+                <option value="creative">Generate Creative Content</option>
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+
+        {% if responses %}
+        <div class="response-container">
+            <h2>Responses</h2>
+            {% for response in responses %}
+                <div class="response-card">
+                    <p>{{ response }}</p>
+                    <form method="POST">
+                        <input type="hidden" name="response_text" value="{{ response }}">
+                        <button type="submit" name="feedback" value="yes">👍 Yes</button>
+                        <button type="submit" name="feedback" value="no">👎 No</button>
+                    </form>
+                </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if feedback_message %}
+        <p class="feedback-message">{{ feedback_message }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
